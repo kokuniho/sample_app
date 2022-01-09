@@ -18,6 +18,7 @@ class ListsController < ApplicationController
   
   def index
     @lists = List.all
+    render :index
   end
 
   def show
@@ -45,5 +46,5 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:title, :body, :image)
   end
-  
 end
+
